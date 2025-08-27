@@ -1,0 +1,189 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+  background: #f1f1f1;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px #00000033;
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+
+    &__logo img {
+      width: 163;
+      height: 48;
+      top: 16px;
+      left: 381px;
+      opacity: 1;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .navbar__collection {
+        display: flex;
+        list-style: none;
+        gap: 38px;
+
+        .navbar__item a {
+          font-family: "Circe", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+          color: #6a6a6a;
+
+          &:hover {
+            color: #00c5de;
+          }
+        }
+      }
+
+      button {
+        width: 240px;
+        height: 44px;
+        opacity: 1;
+        border-radius: 61px;
+        border: 1px solid #00c5de;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "Circe", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #00c5de;
+
+        &:hover {
+          background: #00c5de;
+          color: white;
+        }
+      }
+
+      select {
+        width: 71px;
+        height: 35px;
+        opacity: 1;
+        border-radius: 13px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .popup-menu {
+    display: none;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 15px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+
+        &:hover {
+          color: #00bcd4;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    .navbar {
+      justify-content: space-between;
+      .navbar-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .popup-menu {
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 15px 0;
+
+    .navbar {
+      gap: 15px;
+      justify-content: space-between;
+
+      &__logo img {
+        width: 130px;
+      }
+
+      .hamburger {
+        span {
+          width: 20px;
+          height: 2.5px;
+        }
+      }
+    }
+
+    .popup-menu {
+      padding: 10px;
+
+      ul {
+        gap: 10px;
+
+        li a {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .navbar-links {
+      button {
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+      }
+
+      select {
+        width: 60px;
+        height: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+}

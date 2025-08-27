@@ -1,0 +1,124 @@
+.cards {
+  width: 100%;
+  &-wrapper {
+    text-align: center;
+    padding-top: 75px;
+    &__text {
+      h2 {
+        font-family: "Circe", sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 36px;
+        line-height: 77px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #364c76;
+      }
+    }
+    &__card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+      gap: 30px;
+      margin-bottom: 55px;
+      .card-image {
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 360px;
+          height: 210px;
+          border-radius: 20px;
+          padding: 10px;
+        }
+        div {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          background: #00c5de;
+          outline: 1px dashed #00c5de;
+          outline-offset: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: -38px; 
+          z-index: 1;
+          margin-bottom: 20px;
+          img {
+            width: 60px;
+            height: 60px;
+            padding: 15px;
+            object-fit: cover;
+          }
+        }
+      }
+      .card-body {
+        h4 {
+          font-family: "Circe", sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 37px;
+          text-align: center;
+          color: #00c5de;
+        }
+        p {
+          width: 380px;
+          font-family: Circe;
+          font-weight: 350;
+          font-style: Light;
+          font-size: 16px;
+          line-height: 24px;
+          color: #414141;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .cards-wrapper {
+    &__card {
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+
+      .card-image {
+        width: 300px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .card-body {
+        text-align: center;
+        width: 100%;
+        p {
+        width: 300px;
+      }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-wrapper {
+    &__card {
+      grid-template-columns: 1fr;
+
+      .card-image {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .card-body p {
+        width: 100%;
+      }
+    }
+  }
+}
